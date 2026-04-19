@@ -157,14 +157,17 @@ body {
 
 /* ── HERO ─────────────────────────────────────── */
 .hero {
-  min-height: 100vh;
+  min-height: 750px !important;
+  height: 750px !important;
   position: relative;
   overflow: hidden;
-  display: flex;
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
   align-items: center;
   padding: 0 2rem;
   background: var(--white);
-  max-width: var(--max-w);
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -407,10 +410,10 @@ body {
 .hero-right {
   flex: 0 0 48%;
   max-width: 48%;
-  display: flex;
+  display: flex !important;
   align-items: flex-end;
   justify-content: center;
-  height: 100vh;
+  height: 750px !important;
   position: relative;
   z-index: 1;
 }
@@ -436,9 +439,9 @@ body {
 .photo-wrap {
   width: 100%;
   max-width: 500px;
-  height: 90%;
+  height: 100% !important;
   position: relative;
-  display: flex;
+  display: flex !important;
   align-items: flex-end;
   justify-content: center;
   animation: fadeIn 0.8s 0.2s ease both;
@@ -448,7 +451,7 @@ body {
   width: 100%;
   max-width: 480px;
   height: auto;
-  max-height: 95vh;
+  max-height: 700px !important;
   object-fit: contain;
   object-position: bottom center;
   display: block;
