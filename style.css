@@ -26,14 +26,18 @@
   --transition:    0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  overflow-x: auto;
+}
 
 body {
   font-family: 'Plus Jakarta Sans', sans-serif;
   background: var(--white);
   color: var(--text);
   line-height: 1.65;
-  overflow-x: hidden;
+  min-width: 1200px;
+  overflow-x: auto;
 }
 
 ::-webkit-scrollbar { width: 5px; }
@@ -156,7 +160,7 @@ body {
 
 /* ── HERO ─────────────────────────────────────── */
 .hero {
-  min-height: 100vh;
+  min-height: 700px;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -446,7 +450,7 @@ body {
   width: 100%;
   max-width: 480px;
   height: auto;
-  max-height: 95vh;
+  max-height: 650px;
   object-fit: contain;
   object-position: bottom center;
   display: block;
