@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portofolio – PPG Prajabatan 2026</title>
+  <meta name="description" content="Portofolio profesional mahasiswa PPG Prajabatan 2026 – Pendidik yang Tumbuh Bersama Peserta Didik." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════════
+       NAVBAR
+  ══════════════════════════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+
+      <!-- Logo -->
+      <a href="#home" class="nav-brand">
+        <!-- Pastikan file logo disimpan dengan nama 'logo-ust.png' di folder portfolio -->
+        <img src="logo-ust.png" alt="Logo UST" class="nav-logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <div class="nav-logo-icon" aria-label="Logo universitas" style="display: none;">🏛️</div>
+        <div class="nav-brand-text">
+          <span class="nav-univ">Universitas Sarjanawiyata</span>
+          <span class="nav-sub">PPG Prajabatan 2026</span>
+        </div>
+      </a>
+
+      <!-- Links -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home"      class="nav-link active" id="nav-beranda">Beranda</a></li>
+        <li><a href="#profil"    class="nav-link"        id="nav-profil">Profil</a></li>
+        <li><a href="#artefak"   class="nav-link"        id="nav-artefak">Artefak</a></li>
+        <li><a href="#kompetensi" class="nav-link"       id="nav-kompetensi">Kompetensi</a></li>
+      </ul>
+
+      <!-- CTA -->
+      <a href="#kontak" class="btn-hubungi" id="btn-hubungi">Hubungi Saya</a>
+
+      <!-- Hamburger -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════════════
+       HERO / HOME
+  ══════════════════════════════════════════════ -->
+  <section class="hero" id="home">
+
+    <!-- Decorative circles & Ornaments -->
+    <div class="deco deco-circle-lg"   aria-hidden="true"></div>
+    <div class="deco deco-circle-md"   aria-hidden="true"></div>
+    <div class="deco deco-circle-sm-1" aria-hidden="true"></div>
+    <div class="deco deco-circle-sm-2" aria-hidden="true"></div>
+    <div class="deco deco-circle-sm-3" aria-hidden="true"></div>
+    <div class="deco deco-circle-sm-4" aria-hidden="true"></div>
+    <div class="deco deco-dot-group-1" aria-hidden="true"></div>
+    <div class="deco deco-dot-group-2" aria-hidden="true"></div>
+    <div class="deco deco-outline-1"   aria-hidden="true"></div>
+    <div class="deco deco-outline-2"   aria-hidden="true"></div>
+    <div class="deco deco-blob"        aria-hidden="true"></div>
+    <!-- New Ornaments -->
+    <div class="deco deco-star-1"      aria-hidden="true">✦</div>
+    <div class="deco deco-star-2"      aria-hidden="true">✦</div>
+    <div class="deco deco-star-3"      aria-hidden="true">✦</div>
+    <div class="deco deco-plus-1"      aria-hidden="true">+</div>
+    <div class="deco deco-plus-2"      aria-hidden="true">+</div>
+    <div class="deco deco-ring-1"      aria-hidden="true"></div>
+
+    <!-- Left content -->
+    <div class="hero-left">
+      <p class="hero-eyebrow">Pendidik yang Tumbuh Bersama Peserta Didik</p>
+      <h1 class="hero-name">
+        Satriya<br />Nugraha
+      </h1>
+      <p class="hero-tagline">
+        Dari Pembelajaran Menjadi Pendidik: Perjalanan<br />
+        Menuju Guru Profesional
+      </p>
+      <a href="https://instagram.com/_satriyanugraha" class="btn-ig" id="btn-instagram" target="_blank" rel="noopener">
+        IG @_satriyanugraha
+      </a>
+    </div>
+
+    <!-- Right – photo -->
+    <div class="hero-right">
+      <div class="photo-wrap">
+        <!-- Ganti src di bawah ini dengan foto kamu, contoh: src="foto.png" -->
+        <img
+          src="photo.png"
+          alt="Foto Profil"
+          class="hero-photo"
+          id="hero-photo"
+          onerror="this.style.display='none'; document.getElementById('photo-placeholder').style.display='flex';"
+        />
+        <!-- Placeholder jika foto belum ada -->
+        <div class="photo-placeholder" id="photo-placeholder">
+          <span class="photo-placeholder-icon">👤</span>
+          <p>Letakkan foto kamu<br /><code>photo.png</code></p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="section" id="profil" style="position: relative; overflow: hidden; background: linear-gradient(180deg, var(--white) 0%, hsl(258, 60%, 96%) 100%);">
+    
+    <!-- Ornaments Profil (Agak Rame & Besar) -->
+    <!-- Large Background Blobs -->
+    <div style="position: absolute; top: -100px; left: -100px; width: 500px; height: 500px; background: radial-gradient(circle, var(--purple-soft) 0%, transparent 60%); border-radius: 50%; animation: blobPulse 10s infinite; z-index: 0; pointer-events: none;"></div>
+    <div style="position: absolute; bottom: -150px; right: -100px; width: 650px; height: 650px; background: radial-gradient(circle, hsl(258,70%,88%,0.55) 0%, transparent 65%); border-radius: 50%; animation: floatY 8s infinite alternate; z-index: 0; pointer-events: none;"></div>
+    <div style="position: absolute; top: 35%; left: 35%; width: 450px; height: 450px; background: radial-gradient(circle, hsl(258,60%,92%,0.7) 0%, transparent 60%); border-radius: 50%; animation: blobPulse 12s infinite alternate-reverse; z-index: 0; pointer-events: none;"></div>
+
+    <!-- Huge Rings & Small Circles -->
+    <div style="position: absolute; top: 5%; right: -10%; width: 450px; height: 450px; border: 3px dashed hsl(258,50%,80%,0.35); border-radius: 50%; animation: spin 25s linear infinite; z-index: 0; pointer-events: none;"></div>
+    <div style="position: absolute; bottom: 5%; left: -5%; width: 280px; height: 280px; border: 2px solid hsl(258,50%,85%,0.4); border-radius: 50%; animation: spin 20s linear infinite reverse; z-index: 0; pointer-events: none;"></div>
+    <div style="position: absolute; top: 60%; right: 10%; width: 90px; height: 90px; background: hsl(258,60%,85%,0.35); border-radius: 50%; animation: floatY 5s infinite 1s; z-index: 0; pointer-events: none;"></div>
+    <div style="position: absolute; top: 25%; left: 15%; width: 45px; height: 45px; background: hsl(258,70%,80%,0.45); border-radius: 50%; animation: floatY 6s infinite 0.5s; z-index: 0; pointer-events: none;"></div>
+
+    <!-- Floating Icons (Stars, Plus) -->
+    <div style="position: absolute; top: 12%; right: 20%; font-size: 3.5rem; color: var(--purple-light); opacity: 0.8; animation: spin 14s linear infinite; z-index: 0; pointer-events: none;">✦</div>
+    <div style="position: absolute; bottom: 35%; left: 10%; font-size: 2.8rem; color: var(--purple-light); opacity: 0.7; animation: pulse 3s infinite alternate; z-index: 0; pointer-events: none;">+</div>
+    <div style="position: absolute; bottom: 15%; right: 30%; font-size: 1.8rem; color: hsl(330,70%,80%); opacity: 0.9; animation: spin 8s linear infinite reverse; z-index: 0; pointer-events: none;">✦</div>
+    <div style="position: absolute; top: 30%; left: 8%; font-size: 2.2rem; color: var(--text-muted); opacity: 0.25; animation: pulse 4s infinite alternate; z-index: 0; pointer-events: none;">+</div>
+    <div style="position: absolute; top: 55%; right: 5%; font-size: 2.5rem; color: var(--text-muted); opacity: 0.2; animation: spin 16s linear infinite; z-index: 0; pointer-events: none;">✦</div>
+
+    <div class="container" style="position: relative; z-index: 1;">
+      <div class="section-header">
+        <span class="section-tag" style="background: var(--white);">Kenalan Lebih Jauh</span>
+        <h2 class="section-title">Profil Saya</h2>
+      </div>
+      
+      <!-- TAB NAVIGATION -->
+      <div class="tabs-nav reveal">
+        <button class="tab-btn active" data-target="tab-asal">Asal & Perjalanan</button>
+        <button class="tab-btn" data-target="tab-hobi">Hobi</button>
+        <button class="tab-btn" data-target="tab-alasan">Jejak Pendidik</button>
+      </div>
+
+      <!-- TAB CONTENT -->
+      <div class="tabs-content">
+        
+        <!-- Tab 1: Asal -->
+        <div class="tab-panel active" id="tab-asal">
+          <div class="profil-grid reveal">
+            <div class="profil-text">
+              <h3>Halo, saya <strong>Satriya Nugraha</strong>! 👋</h3>
+              <p>Saya berasal dari <strong>Kabupaten Boyolali</strong> dan saat ini berdomisili di <strong>Kabupaten Klaten</strong>. Kedua daerah tersebut memiliki latar belakang budaya Jawa yang masih sangat kental dan menjadi bagian penting dalam membentuk karakter saya hingga saat ini.</p>
+              <p>Sejak kecil, saya tumbuh dalam lingkungan yang menjunjung tinggi nilai-nilai budaya Jawa seperti gotong royong, sopan santun, serta unggah-ungguh dalam berinteraksi. Nilai seperti <em>tepa selira</em> (tenggang rasa) dan <em>andhap asor</em> (rendah hati) tidak hanya diajarkan secara lisan, tetapi juga dicontohkan langsung dalam kehidupan sehari-hari oleh masyarakat sekitar.</p>
+              <p>Pengalaman tersebut membentuk saya menjadi pribadi yang mampu menghargai orang lain, bersikap sabar, serta peka terhadap perbedaan. Saya menyadari bahwa setiap individu memiliki karakter dan latar belakang yang berbeda, sehingga diperlukan sikap terbuka dan empati dalam menjalin hubungan sosial.</p>
+              <p>Sebagai seorang pendidik, nilai-nilai budaya tersebut saya terapkan dalam proses pembelajaran di kelas. Saya berupaya menciptakan lingkungan belajar yang kondusif, saling menghargai, dan inklusif. Selain itu, saya juga mengintegrasikan nilai karakter dalam pembelajaran, sehingga siswa tidak hanya berkembang secara akademik, tetapi juga memiliki sikap dan perilaku yang baik dalam kehidupan sehari-hari.</p>
+              <p>Dengan demikian, <strong>budaya Jawa</strong> yang saya miliki tidak hanya menjadi identitas pribadi, tetapi juga menjadi landasan dalam menjalankan peran saya sebagai guru yang berorientasi pada pembentukan karakter dan pembelajaran yang bermakna.</p>
+            </div>
+            <div class="profil-image-wrap" style="min-height: 350px; border-radius: var(--radius-lg); overflow: hidden; box-shadow: 0 8px 32px hsl(258,60%,62%,0.08); position: relative; display: flex; flex-direction: column;">
+               <img src="foto-perjalanan.jpg" alt="Foto Kelulusan UNS" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 30%;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+               <div class="photo-placeholder" style="display:none; width:100%; height:100%; min-height: 350px; align-items:center; justify-content:center; flex-direction:column; background:var(--purple-soft); border:2.5px dashed var(--purple-light); border-radius:var(--radius-lg); text-align:center; position: relative;">
+                 <span class="photo-placeholder-icon" style="font-size:4.5rem; margin-bottom:1rem;">📍</span>
+                 <p style="color:var(--text-muted); font-size:1.05rem; line-height:1.6;"> Boyolali ➔ Klaten ➔ UNS <br> <strong>Perjalanan Pendidikan</strong> </p>
+               </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 2: Hobi -->
+        <div class="tab-panel" id="tab-hobi">
+          <div class="hobi-interactive-container reveal">
+            <div class="hobi-nav-list">
+              <button class="hobi-nav-btn active" data-hobi-target="hobi-item-hiking">
+                <span class="hobi-nav-title">Hiking</span>
+              </button>
+              <button class="hobi-nav-btn" data-hobi-target="hobi-item-fotografi">
+                <span class="hobi-nav-title">Fotografi</span>
+              </button>
+              <button class="hobi-nav-btn" data-hobi-target="hobi-item-traveling">
+                <span class="hobi-nav-title">Traveling</span>
+              </button>
+            </div>
+            
+            <div class="hobi-content-display">
+              <!-- Hiking Slider Item -->
+              <div class="hobi-display-item active" id="hobi-item-hiking">
+                <div class="hobi-display-img">
+                   <img src="foto-hiking.jpg" alt="Hiking" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                   <div class="hobi-placeholder" style="display:none;">🏕️<br><code>foto-hiking.jpg</code></div>
+                </div>
+                <div class="hobi-display-text">
+                  <h4>Hiking</h4>
+                  <p style="margin-bottom: 0.8rem;">Hiking adalah hobi yang indah karena mengajarkan kita untuk berhenti sejenak dari hiruk-pikuk kehidupan dan kembali mendengarkan diri sendiri. Di setiap langkah, kita belajar tentang kesabaran, ketekunan, dan arti menikmati proses tanpa terburu-buru. Nafas yang terasa berat justru menjadi pengingat bahwa kita sedang benar-benar hidup.</p>
+                  <p>Di tengah alam yang sunyi dan sederhana, kita menemukan ketenangan yang tidak bisa didapatkan di tempat lain. Hiking bukan hanya tentang mencapai puncak, tetapi tentang perjalanan itu sendiri tentang bagaimana kita belajar bersyukur, menghargai setiap langkah, dan pulang dengan hati yang lebih tenang.</p>
+                </div>
+              </div>
+              
+              <!-- Fotografi Slider Item -->
+              <div class="hobi-display-item" id="hobi-item-fotografi">
+                <div class="hobi-display-img">
+                   <img src="hobi-fotografi.png" alt="Fotografi" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                   <div class="hobi-placeholder" style="display:none;">📸<br><code>hobi-fotografi.png</code></div>
+                </div>
+                <div class="hobi-display-text">
+                  <h4>Fotografi</h4>
+                  <p>Menangkap momen-momen bermakna dan mengabadikan peristiwa berharga di sekitar saya lewat lensa kamera.</p>
+                </div>
+              </div>
+
+              <!-- Traveling Slider Item -->
+              <div class="hobi-display-item" id="hobi-item-traveling">
+                <div class="hobi-display-img">
+                   <img src="foto-traveling.jpg" alt="Traveling" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                   <div class="hobi-placeholder" style="display:none;">🚗<br><code>foto-traveling.jpg</code></div>
+                </div>
+                <div class="hobi-display-text">
+                  <h4>Traveling</h4>
+                  <p>Bepergian ke tempat baru, mempelajari budaya lokal, selalu dapat memperluas wawasan dan pengalaman hidup saya.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 3: Alasan Pendidik -->
+        <div class="tab-panel" id="tab-alasan">
+           <div class="alasan-wrap">
+              <div class="alasan-icon reveal" style="transition-delay: 0.1s;">🎓</div>
+              <h3 class="reveal" style="transition-delay: 0.2s;">Sebuah Panggilan Hati</h3>
+              <div class="reveal" style="transition-delay: 0.3s;">
+                <p>Menjadi pendidik bukan sekadar profesi bagi saya, melainkan sebuah <strong>panggilan jiwa</strong> yang tulus.</p>
+                <p>Saya terinspirasi oleh jejak luar biasa <strong>orang tua dan kakak saya</strong> yang juga adalah seorang guru. Melihat dedikasi tanpa batas dan semangat mereka, saya termotivasi untuk meneruskan estafet kebaikan ini.</p>
+                <p>Pendidikan adalah kunci, dan saya ingin menjadi bagian yang ikut andil membuka potensi setiap peserta didik.</p>
+              </div>
+           </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       ARTEFAK
+  ══════════════════════════════════════════════ -->
+  <section class="section section-alt" id="artefak">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Karya</span>
+        <h2 class="section-title">Artefak Pembelajaran</h2>
+        <p class="section-desc">Kumpulan karya dan produk pembelajaran yang dikembangkan selama PPG</p>
+      </div>
+      <div class="artefak-grid">
+
+        <div class="artefak-card" id="art-1">
+          <div class="artefak-icon">📋</div>
+          <div class="artefak-badge">Perangkat Ajar</div>
+          <h3>Modul Ajar Kurikulum Merdeka</h3>
+          <p>Modul ajar lengkap berbasis Kurikulum Merdeka dengan pendekatan berdiferensiasi untuk memenuhi kebutuhan beragam peserta didik.</p>
+          <div class="artefak-tags"><span>Kurikulum Merdeka</span><span>Diferensiasi</span></div>
+        </div>
+
+        <div class="artefak-card" id="art-2">
+          <div class="artefak-icon">🎮</div>
+          <div class="artefak-badge">Media Pembelajaran</div>
+          <h3>Game Edukasi Interaktif</h3>
+          <p>Media pembelajaran berbasis game menggunakan platform digital untuk meningkatkan motivasi dan keterlibatan peserta didik.</p>
+          <div class="artefak-tags"><span>Quizizz</span><span>Gamifikasi</span></div>
+        </div>
+
+        <div class="artefak-card" id="art-3">
+          <div class="artefak-icon">📊</div>
+          <div class="artefak-badge">Asesmen</div>
+          <h3>Instrumen Asesmen Autentik</h3>
+          <p>Instrumen penilaian autentik yang komprehensif meliputi asesmen diagnostik, formatif, dan sumatif berbasis HOTS.</p>
+          <div class="artefak-tags"><span>HOTS</span><span>Rubrik</span></div>
+        </div>
+
+        <div class="artefak-card" id="art-4">
+          <div class="artefak-icon">🎬</div>
+          <div class="artefak-badge">Media Digital</div>
+          <h3>Video Pembelajaran Animasi</h3>
+          <p>Produksi video pembelajaran animasi untuk memvisualisasikan konsep abstrak agar lebih mudah dipahami peserta didik.</p>
+          <div class="artefak-tags"><span>Canva</span><span>Animasi</span></div>
+        </div>
+
+        <div class="artefak-card" id="art-5">
+          <div class="artefak-icon">🔬</div>
+          <div class="artefak-badge">Penelitian</div>
+          <h3>PTK: Meningkatkan Motivasi Belajar</h3>
+          <p>Penelitian Tindakan Kelas berfokus pada peningkatan motivasi belajar melalui model pembelajaran kooperatif.</p>
+          <div class="artefak-tags"><span>PTK</span><span>Kooperatif</span></div>
+        </div>
+
+        <div class="artefak-card" id="art-6">
+          <div class="artefak-icon">🌐</div>
+          <div class="artefak-badge">E-Learning</div>
+          <h3>Kelas Digital Google Classroom</h3>
+          <p>Pengembangan kelas digital dengan materi terstruktur, kuis interaktif, dan sistem feedback berkala untuk peserta didik.</p>
+          <div class="artefak-tags"><span>Google Classroom</span><span>LMS</span></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       KOMPETENSI
+  ══════════════════════════════════════════════ -->
+  <section class="section" id="kompetensi">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Keahlian</span>
+        <h2 class="section-title">Kompetensi</h2>
+      </div>
+      <div class="komp-grid">
+        <div class="komp-col">
+          <h3 class="komp-cat">🏫 Pedagogik</h3>
+          <div class="skill-list">
+            <div class="skill-item">
+              <div class="skill-header"><span>Perencanaan Pembelajaran</span><span class="skill-pct">90%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header"><span>Asesmen & Evaluasi</span><span class="skill-pct">85%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header"><span>Diferensiasi Pembelajaran</span><span class="skill-pct">88%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="komp-col">
+          <h3 class="komp-cat">💻 Teknologi</h3>
+          <div class="skill-list">
+            <div class="skill-item">
+              <div class="skill-header"><span>Microsoft Office</span><span class="skill-pct">85%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header"><span>Canva & Desain</span><span class="skill-pct">80%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header"><span>Google Workspace</span><span class="skill-pct">75%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="komp-col">
+          <h3 class="komp-cat">🤝 Soft Skills</h3>
+          <div class="softskill-grid">
+            <div class="softskill-item">Komunikasi Efektif</div>
+            <div class="softskill-item">Berpikir Kritis</div>
+            <div class="softskill-item">Kolaborasi Tim</div>
+            <div class="softskill-item">Empati</div>
+            <div class="softskill-item">Kreativitas</div>
+            <div class="softskill-item">Adaptif</div>
+            <div class="softskill-item">Problem Solving</div>
+            <div class="softskill-item">Growth Mindset</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       KONTAK
+  ══════════════════════════════════════════════ -->
+  <section class="section section-alt" id="kontak">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Kontak</span>
+        <h2 class="section-title">Hubungi Saya</h2>
+        <p class="section-desc">Saya terbuka untuk kolaborasi dan diskusi seputar pendidikan!</p>
+      </div>
+      <div class="kontak-wrap">
+        <div class="kontak-info">
+          <div class="kontak-item" id="k-email">
+            <div class="kontak-icon">📧</div>
+            <div><h4>Email</h4><a href="mailto:satriya@email.com">satriya@email.com</a></div>
+          </div>
+          <div class="kontak-item" id="k-ig">
+            <div class="kontak-icon">📱</div>
+            <div><h4>Instagram</h4><a href="https://instagram.com/_satriyanugraha">@_satriyanugraha</a></div>
+          </div>
+          <div class="kontak-item" id="k-li">
+            <div class="kontak-icon">💼</div>
+            <div><h4>LinkedIn</h4><a href="#">linkedin.com/in/satriyanugraha</a></div>
+          </div>
+          <div class="kontak-item" id="k-loc">
+            <div class="kontak-icon">📍</div>
+            <div><h4>Lokasi</h4><span>Indonesia</span></div>
+          </div>
+        </div>
+        <form class="kontak-form" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="f-name">Nama</label>
+              <input type="text" id="f-name" placeholder="Nama Anda" required />
+            </div>
+            <div class="form-group">
+              <label for="f-email">Email</label>
+              <input type="email" id="f-email" placeholder="email@anda.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="f-subject">Subjek</label>
+            <input type="text" id="f-subject" placeholder="Perihal pesan Anda" required />
+          </div>
+          <div class="form-group">
+            <label for="f-message">Pesan</label>
+            <textarea id="f-message" rows="5" placeholder="Tulis pesan Anda di sini..." required></textarea>
+          </div>
+          <button type="submit" class="btn-submit" id="btn-submit">Kirim Pesan →</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© 2026 <strong>Satriya Nugraha</strong> · PPG Prajabatan Universitas Sarjanawiyata</p>
+      <div class="footer-nav">
+        <a href="#home">Beranda</a>
+        <a href="#profil">Profil</a>
+        <a href="#artefak">Artefak</a>
+        <a href="#kompetensi">Kompetensi</a>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-top" id="backTop" aria-label="Kembali ke atas">↑</button>
+  <div class="toast" id="toast">Pesan berhasil dikirim! 🎉</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
