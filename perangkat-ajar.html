@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1200" />
+  <title>Perangkat Ajar – PPG Prajabatan 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=5" />
+  <link rel="icon" type="image/png" href="logo-ust.png" />
+  <style>
+    .detail-section {
+      padding-top: 130px;
+      padding-bottom: 100px;
+      background: linear-gradient(180deg, var(--white) 0%, var(--bg-alt) 100%);
+      min-height: 100vh;
+      position: relative;
+    }
+    .detail-section::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 500px;
+      background: radial-gradient(circle at top right, hsl(258,70%,90%,0.4) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      color: var(--purple-dark);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-bottom: 2.5rem;
+      transition: var(--transition);
+      background: var(--purple-soft);
+      padding: 0.5rem 1.2rem;
+      border-radius: 99px;
+    }
+    .back-btn:hover {
+      background: var(--purple);
+      color: var(--white);
+      transform: translateX(-5px);
+    }
+    .rpp-container {
+      background: var(--glass-bg);
+      backdrop-filter: blur(var(--glass-blur));
+      -webkit-backdrop-filter: blur(var(--glass-blur));
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius-lg);
+      padding: 4rem;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      z-index: 1;
+    }
+    .rpp-header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 2.5rem;
+      margin-bottom: 3rem;
+    }
+    .rpp-header h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      color: var(--dark);
+      margin-top: 0.75rem;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+    .rpp-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+    .rpp-meta span { display: flex; align-items: center; gap: 0.5rem; }
+    .rpp-content h2 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin: 3.5rem 0 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+    .rpp-content h2::before {
+      content: '';
+      width: 4px;
+      height: 1.2em;
+      background: var(--purple);
+      border-radius: 2px;
+    }
+    .rpp-content p {
+      margin-bottom: 1.25rem;
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 1.05rem;
+    }
+    .info-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin-bottom: 2.5rem;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .info-table td {
+      padding: 1.2rem 1.5rem;
+      border-bottom: 1px solid var(--border);
+      font-size: 1rem;
+    }
+    .info-table tr:last-child td { border-bottom: none; }
+    .info-table td:first-child {
+      background: rgba(258, 80%, 95%, 0.4);
+      font-weight: 700;
+      color: var(--purple-dark);
+      width: 35%;
+    }
+    .download-card {
+      background: linear-gradient(135deg, var(--purple-soft) 0%, hsl(258,60%,90%) 100%);
+      border: 1px solid var(--white);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 4rem;
+      box-shadow: var(--shadow-md);
+    }
+    .download-info h4 { 
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.4rem;
+      color: var(--dark);
+      margin-bottom: 0.5rem; 
+    }
+    .btn-download {
+      background: var(--dark-accent);
+      color: white;
+      text-decoration: none;
+      padding: 1rem 2.5rem;
+      border-radius: 99px;
+      font-weight: 700;
+      font-size: 1rem;
+      transition: var(--transition);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .btn-download:hover {
+      background: var(--purple);
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 8px 25px rgba(103, 61, 230, 0.3);
+    }
+    .pdf-viewer-container {
+      width: 100%;
+      height: 800px;
+      margin: 3rem 0;
+      border: 1px dashed var(--purple-light);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      background: #fafafa;
+      position: relative;
+    }
+    .pdf-viewer-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    .pdf-fallback {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR (REUSED) -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="nav-container">
+      <a href="index.html#home" class="nav-brand">
+        <img src="logo-ust.png" alt="Logo UST" class="nav-logo-img" />
+        <div class="nav-brand-text">
+          <span class="nav-univ">Universitas Sarjanawiyata Tamansiswa</span>
+          <span class="nav-sub">PPG Prajabatan 2026</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html#home" class="nav-link">Beranda</a></li>
+        <li><a href="index.html#profil" class="nav-link">Profil</a></li>
+        <li><a href="index.html#artefak" class="nav-link">Artefak</a></li>
+        <li><a href="index.html#kontak" class="btn-hubungi">Hubungi Saya</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="detail-section page-enter">
+    <div class="container">
+      <a href="index.html#artefak" class="back-btn">← Kembali ke Artefak</a>
+      
+      <div class="rpp-container">
+        <div class="rpp-header">
+          <span class="section-tag">Artefak Pembelajaran</span>
+          <h1>RPP atau Perencanaan Pembelajaran Mendalam</h1>
+          <div class="rpp-meta">
+            <span>📅 April 2026</span>
+            <span>📂 Perangkat Ajar</span>
+            <span>🎓 Teknik Mesin (Gambar Teknik)</span>
+          </div>
+        </div>
+
+        <div class="rpp-content">
+          <h2>Identitas Modul</h2>
+          <table class="info-table">
+            <tr>
+              <td>Penyusun</td>
+              <td>Satriya Nugraha, S.Pd.</td>
+            </tr>
+            <tr>
+              <td>Instansi</td>
+              <td>Universitas Sarjanawiyata Tamansiswa</td>
+            </tr>
+            <tr>
+              <td>Tahun Penyusunan</td>
+              <td>2026</td>
+            </tr>
+            <tr>
+              <td>Jenjang Sekolah</td>
+              <td>Fase E/10 SMK</td>
+            </tr>
+            <tr>
+              <td>Mata Pelajaran</td>
+              <td>Dasar-dasar Teknik Mesin (Gambar Teknik)</td>
+            </tr>
+            <tr>
+              <td>Alokasi Waktu</td>
+              <td>8 x 45 / 8 JP</td>
+            </tr>
+          </table>
+
+          <h2>Kompetensi Awal</h2>
+          <p>Siswa telah memiliki kemampuan untuk menggunakan alat gambar dan memahami satuan alat ukur serta memahami aturan garis pada gambar manual.</p>
+
+          <h2>Tujuan Pembelajaran</h2>
+          <p><strong>1.1.</strong> Peserta didik mampu memahami konsep proyeksi ortogonal pada sistem proyeksi Amerika dan Eropa dalam gambar teknik dengan benar.</p>
+          <p><strong>1.2.</strong> Peserta didik mampu membuat gambar proyeksi benda sederhana menggunakan sistem proyeksi Amerika dan Eropa sesuai kaidah gambar teknik dengan tepat dan rapi. (KKTP)</p>
+
+          <p><strong>Detail Indikator (KKTP):</strong></p>
+          <ul>
+            <li><strong>1.1.1.</strong> Peserta didik mampu menjelaskan pengertian proyeksi ortogonal dalam gambar teknik dengan benar.</li>
+            <li><strong>1.1.2.</strong> Peserta didik mampu membedakan sistem proyeksi Amerika (<em>third angle projection</em>) dan sistem proyeksi Eropa (<em>first angle projection</em>) dengan tepat.</li>
+            <li><strong>1.2.1.</strong> Peserta didik mampu menentukan posisi tampak depan, tampak atas, dan tampak samping pada sistem proyeksi Amerika dan Eropa dengan benar.</li>
+            <li><strong>1.2.2.</strong> Peserta didik mampu membuat gambar proyeksi benda sederhana menggunakan sistem proyeksi Amerika dan Eropa sesuai standar gambar teknik.</li>
+          </ul>
+
+          <h2>Materi Pembelajaran</h2>
+          <p>Materi gambar teknik mencakup pengetahuan faktual, konseptual, dan prosedural tentang penggunaan alat gambar, jenis garis, serta standar gambar teknik.</p>
+
+          <h2>Preview Dokumen</h2>
+          <div class="pdf-viewer-container">
+            <div class="pdf-fallback">
+              <p>Sedang memuat preview... <br> (Jika tidak muncul, pastikan file PDF sudah tersedia di folder assets/docs)</p>
+            </div>
+            <iframe src="assets/docs/Modul_Ajar_PPG.pdf#toolbar=0" title="Preview RPP"></iframe>
+          </div>
+
+          <h2>Metode & Model Pembelajaran</h2>
+          <p>Pembelajaran menggunakan model <strong>Project Based Learning (PJBL)</strong> dengan metode diskusi kelompok, praktikum gambar manual, dan penugasan proyek kreatif.</p>
+
+          <div class="download-card">
+            <div class="download-info">
+              <h4>Dokumen Lengkap RPP</h4>
+              <p class="section-desc" style="margin:0; text-align:left;">File PDF berisi rincian langkah kegiatan, asesmen, dan lampiran materi.</p>
+            </div>
+            <a href="assets/docs/Modul_Ajar_PPG.pdf" class="btn-download" target="_blank">Download PDF</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© 2026 <strong>Satriya Nugraha</strong> · PPG Prajabatan Universitas Sarjanawiyata</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

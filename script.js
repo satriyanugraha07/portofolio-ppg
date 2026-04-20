@@ -143,6 +143,7 @@ tabBtns.forEach(btn => {
   });
 });
 
+
 // ── HOBI INTERACTIVE TABS ────────────────────────
 const hobiBtns = document.querySelectorAll('.hobi-nav-btn');
 const hobiItems = document.querySelectorAll('.hobi-display-item');
@@ -165,3 +166,4 @@ hobiBtns.forEach(btn => {
   btn.addEventListener('mouseenter', () => switchHobi(btn));
   btn.addEventListener('click', () => switchHobi(btn));
 });
+
